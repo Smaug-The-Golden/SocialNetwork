@@ -113,7 +113,8 @@ namespace SocialNetwork.BLL.Services
                           userEntity.favorite_movie,
                           userEntity.favorite_book,
                           incomingMessages,
-                          outgoingMessages);
+                          outgoingMessages
+                          );
         }
     }
 }
