@@ -11,7 +11,7 @@ namespace SocialNetwork.DAL.Repositories
                 values (:firstname,:lastname,:password,:email)", userEntity);
         }
 
-        public int DeleteByld(int id)
+        public int DeleteById(int id)
         {
             return Execute(@"delete from users where id = :id_p", new { id_p = id });
         }
@@ -26,7 +26,7 @@ namespace SocialNetwork.DAL.Repositories
             return QueryFirstOrDefault<UserEntity>("select*from users where email=:email_p", new { email_p= email});
         }
 
-        public UserEntity FindByld(int id)
+        public UserEntity FindById(int id)
         {
             return QueryFirstOrDefault<UserEntity>("select*from users where id=:id_p", new { id_p = id});
         }

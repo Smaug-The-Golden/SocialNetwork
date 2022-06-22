@@ -8,9 +8,9 @@ namespace SocialNetwork.DAL.Repositories
         int Create(UserEntity userEntity);
         UserEntity FindByEmail(string email);
         IEnumerable<UserEntity> FindAll();
-        UserEntity FindByld(int id);
+        UserEntity FindById(int id);
         int Update(UserEntity userEntity);
-        int DeleteByld(int id);
+        int DeleteById(int id);
 
     }
 }
