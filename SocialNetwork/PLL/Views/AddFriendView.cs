@@ -3,10 +3,6 @@ using SocialNetwork.BLL.Models.Exceptions;
 using SocialNetwork.BLL.Services;
 using SocialNetwork.PLL.Helpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SocialNetwork.PLL.Views
 {
@@ -23,7 +19,7 @@ namespace SocialNetwork.PLL.Views
             {
                 var userAddFriendData = new AddFriendData();
 
-                Console.WriteLine("Введите почтовый адрес пользователя которого хотите добавить в друзья: ");
+                Console.WriteLine("\nВведите почтовый адрес пользователя которого хотите добавить в друзья: ");
 
                 userAddFriendData.FriendEmail = Console.ReadLine();
                 userAddFriendData.UserId = user.Id;

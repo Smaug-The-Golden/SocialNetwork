@@ -19,8 +19,9 @@ namespace SocialNetwork.PLL.Views
         {
             while (true)
             {
-                Console.WriteLine("Входящие сообщения: {0}", user.IncomingMessages.Count());
+                Console.WriteLine("\nВходящие сообщения: {0}", user.IncomingMessages.Count());
                 Console.WriteLine("Исходящие сообщения: {0}", user.OutgoingMessages.Count());
+                Console.WriteLine("Мои друзья: {0}", user.Friends.Count());
 
                 Console.WriteLine("Просмотреть информацию о моём профиле (нажмите 1)");
                 Console.WriteLine("Редактировать мой профиль (нажмите 2)");
@@ -32,7 +33,7 @@ namespace SocialNetwork.PLL.Views
 
                 string keyValue = Console.ReadLine();
 
-                if (keyValue == "7") break;
+                if (keyValue == "8") break;
 
                 switch (keyValue)
                 {
@@ -44,6 +45,13 @@ namespace SocialNetwork.PLL.Views
                     case "2":
                         {
                             Program.userDataUpdateView.Show(user);
+                            break;
+                        }
+
+                    case "3":
+                        {
+                            Program.addingFriendView.Show(user);
+                            user = userService.FindById(user.Id);
                             break;
                         }
 
@@ -63,6 +71,12 @@ namespace SocialNetwork.PLL.Views
                     case "6":
                         {
                             Program.userOutcomingMessageView.Show(user.OutgoingMessages);
+                            break;
+                        }
+
+                    case "7":
+                        {
+                            Program.userFriendView.Show(user.Friends);
                             break;
                         }
                 }

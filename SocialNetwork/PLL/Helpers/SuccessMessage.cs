@@ -8,7 +8,7 @@ namespace SocialNetwork.PLL.Helpers
         {
             ConsoleColor originalColour = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(message);
+            Console.WriteLine($"\n{ message}");
             Console.ForegroundColor = originalColour;
         }
     }
